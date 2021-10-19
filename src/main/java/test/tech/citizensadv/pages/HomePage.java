@@ -16,7 +16,7 @@ public class HomePage extends Utility {
 
     //Page Object Model
     By verifyCitizensAdviceHomePage = By.xpath("//h1[contains(text(),'Welcome to Citizens Advice')]");
-    By getAdviceForPopUp = By.xpath("//div[@class='home-extent-popup__options']/a[1]");
+    By getAdviceForPopUp = By.xpath("//a[@class='home-extent-popup__link'][normalize-space()='England']");
     By listOfItems = By.xpath("//nav[@id='main-nav']");
     By ImmigrationTab = By.xpath("//body/nav[@id='main-nav']/ul[1]/li[8]/a[1]");
 

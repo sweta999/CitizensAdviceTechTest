@@ -7,9 +7,12 @@ Feature:Search Functionality
     When  I input text "Citizens Advice" in search box
     Then  I should be navigated to Citizens Advice Website
 
-#    // Test: 2
+
+#  // Test: 2
   Scenario Outline: I can see and verify the list of items on the main navigation header of the home page
-    Given I am on Citizens Advice home page
+    Given I am on Google page
+    When  I input text "Citizens Advice" in search box
+    Then  I should be navigated to Citizens Advice Website
     And   I click England as option
     And   I am able to see the list of items
     Then  Verify list of items "<items>" on the main navigation header of the home page.
@@ -26,16 +29,16 @@ Feature:Search Functionality
       | Health         |
       | More from us   |
 
-#    //Test:3
-  Scenario: Search for "Immigration" on home page, verify a link "Staying in the UK on a visa without your partner,
-            Navigate to the link and I can see immigration related help under main immigration section.
-            I can search for "Immigration on Brexit" on home page and verify search results contain a link to,
-            "Staying in the UK on a visa without your partner".
-    Given I am on Citizens Advice home page
-    When  I click on Immigration tab
-    And   Verify I am navigated to Immigration page
-    And   Verify search results contain a link "Staying in the UK on a visa without your partner"
-    And   I click on "Staying in the UK on a visa without your partner" link
-    And   I am navigated to Staying in the UK on a visa without your partner page
-    Then  Verify I can see immigration related help under main immigration section
+##    //Test:3
+#  Scenario: Search for "Immigration" on home page, verify a link "Staying in the UK on a visa without your partner,
+#            Navigate to the link and I can see immigration related help under main immigration section.
+#            I can search for "Immigration on Brexit" on home page and verify search results contain a link to,
+#            "Staying in the UK on a visa without your partner".
+#    Given I am on Citizens Advice home page
+#    When  I click on Immigration tab
+#    And   Verify I am navigated to Immigration page
+#    And   Verify search results contain a link "Staying in the UK on a visa without your partner"
+#    And   I click on "Staying in the UK on a visa without your partner" link
+#    And   I am navigated to Staying in the UK on a visa without your partner page
+#    Then  Verify I can see immigration related help under main immigration section
 

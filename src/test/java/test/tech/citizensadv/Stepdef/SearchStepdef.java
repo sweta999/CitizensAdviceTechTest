@@ -15,11 +15,13 @@ public class SearchStepdef {
 
     @Given("^I am on Google page$")
     public void iAmOnGooglePage() {
+        new GooglePage().clickOnAgreeBtn();
     }
 
     @When("^I input text \"([^\"]*)\" in search box$")
-    public void iInputTextInSearchBox()  {
-        new GooglePage().setGoogleSearchBox();
+    public void iInputTextInSearchBox(String text)  {
+        new GooglePage().setGoogleSearchBox(text);
+        new GooglePage().clickOnGoogleSearchBtn();
     }
 
     @Then("^I should be navigated to Citizens Advice Website$")
@@ -76,7 +78,5 @@ public class SearchStepdef {
     public void verifyICanSeeImmigrationRelatedHelpUnderMainImmigrationSection() {
         Assert.assertEquals("search for an immigration adviser", new StayingInUKOnVisaWithoutPartnerPage().verifyImmigrationRelatedHelp());
     }
-
-
 
 }

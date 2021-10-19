@@ -125,7 +125,7 @@ public class Utility extends BasePage {
      * @return
      */
     public static String takeScreenShot(WebDriver driver, String name) {
-        String filePath = System.getProperty("user.dir") + "/src/main/java/com/test/modulr/screenshots";
+        String filePath = System.getProperty("user.dir") + "/src/main/java/test/tech/citizensadv/screenshot";
         TakesScreenshot screenshot = (TakesScreenshot) BasePage.driver;
         File scr1 = screenshot.getScreenshotAs(OutputType.FILE);
         try {
